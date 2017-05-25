@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="estilos.css">
+    <title>CapacidadCd</title>
+    </head>
+   
+<br><br>
+<form class='formulario'>
+ <H1>CALCULAR CAPACIDAD DE UN CD</H1>
+<input type="text" placeholder="716800 KB" id="num1"><br><br>
+<input type="text" placeholder="Tamaño en KB archivo Pdf" id="num2"><br><br>
+<input type="text" placeholder="Tamaño en KB archivo word" id="num3"><br><br>
+ <div class="btn__form">
+<input type="button" name="name" value="CALCULAR" onclick="suma();">
+<input type='submit' value='LIMPIAR'>
+ </div>
+</form>
+    <body>
+		<script type="text/javascript">
+            function suma(){
+                var conver1;
+                var conver2;
+                var conver3;
+                var numuno;
+                var numdos;
+                var numcopias;
+                var espaciolib;
+                var resultado;
+                var capacidad = 716800;
+
+                var tamanouno =parseInt(document.getElementById("num2").value); 
+                var tamanodos= parseInt(document.getElementById("num3").value);
+                
+
+                numuno=tamanouno;
+                numdos=tamanodos;
+                conver1=numuno*1024;
+                conver2=numdos*1024;
+                
+
+                
+                conver3=700*1024;
+                resultado=conver1 + conver2;
+                espaciolib=conver3-resultado;
+                numcopias=resultado/espaciolib;
+
+               
+            alert("PESO DE LOS DOS ARCHIVOS : " + resultado + " KB" +  "    EL ESPACIO LIBRE ES  : " + espaciolib + " KB" + " NUMERO DE COPIAS  : " + numcopias);
+                             
+           }
+            
+    </script> 
+
+	</body>
+</html>
